@@ -11,7 +11,7 @@ import { ProductMain } from './productMain';
 
 export class DataService {
 
-  private REST_API_SERVER = "https://nokia-sitedetail.herokuapp.com/getData/";
+  private REST_API_SERVER = "https://sitedetailstracker.herokuapp.com/getData/";
   constructor(private httpClient: HttpClient) { }
 
   handleError(error: HttpErrorResponse) {
