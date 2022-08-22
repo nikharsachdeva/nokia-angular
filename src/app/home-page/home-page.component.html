@@ -1,94 +1,97 @@
-<div style="margin: 200px;">
+<div class="container-xxl py-5 category">
+    <div class="container">
 
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <p class="card-text">Enter Sheet Id</p>
-                    <input #searchBar name='searchBar' [(ngModel)]='searchValue' type="text" class="form-control" placeholder="Enter here">
-                    <br>
-                    <button (click)="performSearch()" type="submit" class="btn btn-primary mb-2">Search</button>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">Enter Sheet Id</p>
+                        <input #searchBar name='searchBar' [(ngModel)]='searchValue' type="text" class="form-control" placeholder="Enter here">
+                        <br>
+                        <button (click)="performSearch()" type="submit" class="btn btn-primary mb-2">Search</button>
 
+                    </div>
                 </div>
             </div>
         </div>
+
+
+        <table class="table table-striped" style="margin-top: 50px;">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Site Code</td>
+                    <td>{{product.siteCode}}</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Site Name</td>
+                    <td>{{product.siteName}}</td>
+                </tr>
+
+
+                <tr>
+                    <th scope="row">3</th>
+                    <td>BTS Id</td>
+                    <td>{{product.btsId}}</td>
+                </tr>
+
+
+                <tr>
+                    <th scope="row">4</th>
+                    <td>RNC Id</td>
+                    <td>{{product.rncId}}</td>
+                </tr>
+
+
+                <tr>
+                    <th scope="row">5</th>
+                    <td>WBTS Id</td>
+                    <td>{{product.wbtsId}}</td>
+                </tr>
+
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td>BSC Id</td>
+                    <td>{{product.bscId}}</td>
+                </tr>
+
+
+                <tr>
+                    <th scope="row">7</th>
+                    <td>BCF Id</td>
+                    <td>{{product.bcfId}}</td>
+                </tr>
+
+
+                <tr>
+                    <th scope="row">8</th>
+                    <td>OAM IP</td>
+                    <td>{{product.oamIp}}</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">9</th>
+                    <td>Existing Site Config</td>
+                    <td>{{product.existingSiteConfig}}</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">10</th>
+                    <td>New Site Config</td>
+                    <td>{{product.newSiteConfig}}</td>
+                </tr>
+
+            </tbody>
+        </table>
     </div>
-
-    <table class="table table-striped" style="margin-top: 50px;">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Site Code</td>
-                <td>{{product.siteCode}}</td>
-            </tr>
-
-            <tr>
-                <th scope="row">2</th>
-                <td>Site Name</td>
-                <td>{{product.siteName}}</td>
-            </tr>
-
-
-            <tr>
-                <th scope="row">3</th>
-                <td>BTS Id</td>
-                <td>{{product.btsId}}</td>
-            </tr>
-
-
-            <tr>
-                <th scope="row">4</th>
-                <td>RNC Id</td>
-                <td>{{product.rncId}}</td>
-            </tr>
-
-
-            <tr>
-                <th scope="row">5</th>
-                <td>WBTS Id</td>
-                <td>{{product.wbtsId}}</td>
-            </tr>
-
-
-            <tr>
-                <th scope="row">6</th>
-                <td>BSC Id</td>
-                <td>{{product.bscId}}</td>
-            </tr>
-
-
-            <tr>
-                <th scope="row">7</th>
-                <td>BCF Id</td>
-                <td>{{product.bcfId}}</td>
-            </tr>
-
-
-            <tr>
-                <th scope="row">8</th>
-                <td>OAM IP</td>
-                <td>{{product.oamIp}}</td>
-            </tr>
-
-            <tr>
-                <th scope="row">9</th>
-                <td>Existing Site Config</td>
-                <td>{{product.existingSiteConfig}}</td>
-            </tr>
-
-            <tr>
-                <th scope="row">10</th>
-                <td>New Site Config</td>
-                <td>{{product.newSiteConfig}}</td>
-            </tr>
-
-        </tbody>
-    </table>
 </div>
