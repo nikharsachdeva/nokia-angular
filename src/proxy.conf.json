@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://nokia-sitedetail.herokuapp.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
