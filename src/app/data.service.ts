@@ -11,7 +11,7 @@ import { ProductMain } from './productMain';
 
 export class DataService {
 
-  private REST_API_SERVER = "https://sitedetailstracker.herokuapp.com/getData/";
+  private REST_API_SERVER = "https://sitedetailstracker.herokuapp.com/siteDetails/";
   constructor(private httpClient: HttpClient) { }
 
   handleError(error: HttpErrorResponse) {
@@ -34,6 +34,17 @@ export class DataService {
    headers.append('Accept', 'application/json');
    headers.append('Access-Control-Allow-Origin', '*');
 
-    return this.httpClient.get<ProductMain>(this.REST_API_SERVER+searchedValue,{ 'headers': headers }).pipe(retry(1), catchError(this.handleError));
+    return this.httpClient.get<ProductMain>(this.REST_API_SERVER+"/getSite/"+searchedValue,{ 'headers': headers }).pipe(retry(1), catchError(this.handleError));
+  }
+
+  public uploadFile(file: File){
+    const formData = new FormData();
+    formData.append('l_file', file);
+    let headers = new HttpHeaders();
+   headers.append('Content-Type', 'application/json');
+   headers.append('Accept', 'application/json');
+   headers.append('Access-Control-Allow-Origin', '*');
+
+    return this.httpClient.post<ProductMain>(this.REST_API_SERVER+"addSiteDetails",formData,{ 'headers': headers }).pipe(retry(1), catchError(this.handleError));
   }
 }
